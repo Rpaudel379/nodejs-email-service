@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      network: host
+      target: prod
+    container_name: email_module
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.dev    # Use .env.dev for development
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
+

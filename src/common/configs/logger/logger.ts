@@ -1,0 +1,16 @@
+export const redact = [
+  "req.headers.authorization",
+  "imapConfig.password",
+  "smtpConfig.auth.pass",
+  "password",
+  "*.password",
+  "pass",
+  "*.pass",
+  "*.imap.password",
+  "*.imap.pass",
+  "*.smtp.password",
+  "*.smtp.pass",
+  "*.webhook.credentials.token",
+  "*.webhook.credentials.clientId",
+  "*.webhook.credentials.clientSecret",
+];
