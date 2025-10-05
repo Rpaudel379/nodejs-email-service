@@ -28,7 +28,7 @@ This guide will walk you through the steps to set up **Email Notification** on *
 
 #### 1. Install Node
 
-Laragon is an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. To install it:
+Node.js is an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. To install it:
 
 1. **Download NodeJS v20.18.3 (LTS)** (or above) from the [NodeJS website](https://nodejs.org/en/download/).
 2. Run the installer and follow the on-screen instructions.
