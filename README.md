@@ -1,6 +1,23 @@
-# Email Notification Module Installation Guide
+# Email Service
 
-Email Notification Module is an independent program designed to receive live incoming emails and forward them to specific endpoint.
+## Introduction
+
+This Node.js Email Service Backend is a multi-tenant SaaS application designed to handle incoming and outgoing emails for multiple clients. Each client can securely store their IMAP and SMTP credentials, allowing the service to receive live emails, parse them, store them in a database, and forward them to client-defined webhooks. The service also supports sending emails using client SMTP accounts.
+
+## Description
+
+The service bootstraps by fetching all registered clients from the database and initializing IMAP connections for each. Incoming emails are parsed using `mailparser`, stored in MongoDB, and forwarded to the specified webhook endpoint along with attachments. Webhook requests are secured via a basic authentication token, ensuring that only authorized clients can receive forwarded emails.
+
+Key features include:
+
+- Multi-tenant support with isolated client credentials.
+- Real-time email listening and parsing.
+- Database storage for all incoming emails.
+- Forwarding emails to webhooks with attachments.
+- Secure webhook communication using basic authentication.
+- SMTP support for sending emails on behalf of clients.
+
+The system is designed to be extensible, with future support planned for MinIO attachment storage, per-client authentication methods, and enhanced webhook management.
 
 This guide will walk you through the steps to set up **Email Notification** on **Windows**, **Linux**, and **macOS**.
 
